@@ -85,6 +85,11 @@ export GEMINI_API_KEY="your_api_key_here"
 streamlit run app.py
 ```
 
+PowerShell:
+```bash
+py -m streamlit run app.py
+```
+
 ---
 
 ## 🔄 Running on a New Domain (Cache Reset)
