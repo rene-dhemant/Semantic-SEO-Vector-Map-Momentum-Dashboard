@@ -65,6 +65,11 @@ Run the installation:
 pip install -r requirements.txt
 ```
 
+PowerShell:
+```bash
+py -m pip install -r requirements.txt
+```
+
 **3. Set Environment Variables**
 Export your API key so the embedder can authenticate:
 ```bash
