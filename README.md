@@ -59,3 +59,50 @@ scikit-learn
 umap-learn
 plotly
 google-genai
+```
+Run the installation:
+```bash
+pip install -r requirements.txt
+```
+
+**3. Set Environment Variables**
+Export your API key so the embedder can authenticate:
+```bash
+# Windows (PowerShell)
+$env:GEMINI_API_KEY="your_api_key_here"
+
+# Mac/Linux
+export GEMINI_API_KEY="your_api_key_here"
+```
+
+**4. Run the Application**
+```bash
+streamlit run app.py
+```
+
+---
+
+## 👔 The Strategic Consultant Viewpoint
+
+As a strategic SEO consultant, this map is not just a data visualization—it is a boardroom-ready diagnostic tool for enterprise content strategy. Here is how to interpret the data and drive action:
+
+### 1. The Strategy Matrix (Quadrant Analysis)
+The tool calculates median Clicks and median Impressions (Value) to categorize every URL into four actionable buckets:
+
+* **🟢 KEEP (Core): High Traffic + High Value**
+  * *Insight:* These are the money pages. They are semantically aligned with your site center and pull their weight in traffic. 
+  * *Action:* Protect these at all costs. Keep content fresh, ensure they are heavily linked to internally, and monitor their Traffic Velocity for early signs of decay.
+* **📈 GROW: Low Traffic + High Value**
+  * *Insight:* These pages are highly relevant to your core entity (Google grants them impressions) but they aren't winning the click. 
+  * *Action:* Optimize Title Tags/Meta Descriptions for CTR. Build targeted internal link silos pointing here using the *Internal Link Gravity* overlay. Update content to better match search intent.
+* **🚀 RELOCATE: High Traffic + Low Value (The Danger Zone)**
+  * *Insight:* This is the biggest blind spot for most marketing teams. These are often support docs, glossaries, or tangential blog posts that get massive traffic but don't convert. *Worse, they pull your Site Center away from your revenue topics, diluting your domain's topical authority.*
+  * *Action:* Do not delete them (you want the traffic), but **move them to a subdomain** (e.g., `support.yourdomain.com`). Subdomains are evaluated as separate semantic entities by Google, allowing you to keep the traffic without dragging your main domain's authority off course.
+* **✂️ PRUNE: Low Traffic + Low Value**
+  * *Insight:* Dead weight. These pages use crawl budget, bloat the index, and contribute nothing to semantics or revenue.
+  * *Action:* Delete and return a 404/410, merge and 301 redirect into a stronger "Grow" page, or completely rewrite if the topic is deemed necessary for future strategy.
+
+### 2. Advanced Strategic Plays
+* **The "Moat" Strategy (Competitor Overlay):** When you toggle the competitor overlay, look for dense clusters of competitor pages in the "Core" or "Focus" rings where you have empty space. This visually proves a topical gap to stakeholders. *Action: Dispatch content teams to build out these missing semantic nodes.*
+* **The "Silo" Audit (Internal Links):** If you click a high-value "Grow" page and see very few green nodes (inlinks) lighting up, the page is orphaned in the vector space. *Action: Inject links from high-traffic "Keep" pages to pass PageRank and semantic relevance.*
+* **Catching Content Decay:** By switching to the "Velocity" view, you can see which clusters are bleeding traffic before it hits the bottom line. *Action: Prioritize Q3/Q4 content refreshes specifically on red nodes in the Core rings.*
