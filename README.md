@@ -82,6 +82,17 @@ streamlit run app.py
 
 ---
 
+## 🔄 Running on a New Domain (Cache Reset)
+If you want to run this application on a completely different website after your initial run, you **must clear the application cache**, or the app will crash due to matrix and vector mismatches. 
+
+Follow this checklist when analyzing a new domain:
+1. **Delete the Cache:** Delete the `embeddings.pkl` file in your directory. This forces the app to call the API and generate fresh vectors for the new site.
+2. **Swap the Core Data:** Replace the old `crawl_data.csv` and `gsc_data.csv` files with the new domain's exports.
+3. **Clear Optional Overlays:** Remove any old `inlinks.csv`, `competitor_crawl.csv`, or `gsc_historical.csv` files so they don't accidentally overlay onto your new map.
+4. **Run the App:** Run `streamlit run app.py`. The app will take a minute to process the new text, build the new `.pkl` cache, and render the map.
+
+---
+
 ## 👔 The Strategic Consultant Viewpoint
 
 As a strategic SEO consultant, this map is not just a data visualization—it is a boardroom-ready diagnostic tool for enterprise content strategy. Here is how to interpret the data and drive action:
